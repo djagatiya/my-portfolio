@@ -28,23 +28,44 @@ export default function Home() {
       
       {/* Intro Section */}
       <section id="intro" className="snap-start min-h-screen flex items-center justify-center bg-gray-800 px-6">
-        <div className="flex flex-col md:flex-row items-center gap-12 max-w-5xl">
-          <div className="text-center md:text-left max-w-xl text-white">
-            <h1 className="text-5xl font-bold">Divyesh Jagatiya</h1>
-            <p className="text-xl mt-2">Sr. Software Engineer | Generative AI | Big Data | Blog Writer</p>
-            <p className="mt-6 text-gray-200">
-              7+ years of experience in software engineering, deep learning, and big data technologies
-              for the e-discovery domain. Worked in Hadoop map-reduce programming, text analytics,
-              and image analytics to deliver insights and implement solutions for complex business problems.
-            </p>
+        <div className="flex flex-col items-center gap-6 max-w-5xl">
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            <div className="text-center md:text-left max-w-xl text-white">
+              <h1 className="text-5xl font-bold">Divyesh Jagatiya</h1>
+              <p className="text-xl mt-2">Sr. Software Engineer | Generative AI | Big Data | Blog Writer</p>
+              <p className="mt-6 text-gray-200">
+                7+ years of experience in software engineering, deep learning, and big data technologies
+                for the e-discovery domain. Worked in Hadoop map-reduce programming, text analytics,
+                and image analytics to deliver insights and implement solutions for complex business problems.
+              </p>
+            </div>
+            <div className="w-40 h-40 relative">
+              <Image 
+                src="/my-portfolio/1644206273267.jpeg" 
+                alt="Divyesh Jagatiya" 
+                fill
+                className="rounded-full object-cover" 
+              />
+            </div>
           </div>
-          <div className="w-40 h-40 relative">
-            <Image 
-              src="/my-portfolio/1644206273267.jpeg" 
-              alt="Divyesh Jagatiya" 
-              fill
-              className="rounded-full object-cover" 
-            />
+          {/* Cards at the bottom of the section */}
+          <div className="mt-12 w-full max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="bg-gray-600 p-4 rounded-xl text-center shadow hover:shadow-lg transition">
+              <p className="text-3xl font-bold">7+</p>
+              <p className="text-gray-200 mt-1">Years Experience</p>
+            </div>
+            <div className="bg-gray-600 p-4 rounded-xl text-center shadow hover:shadow-lg transition">
+              <p className="text-3xl font-bold">10+</p>
+              <p className="text-gray-200 mt-1">Technologies</p>
+            </div>
+            <div className="bg-gray-600 p-4 rounded-xl text-center shadow hover:shadow-lg transition">
+              <p className="text-gray-200 mt-1">
+                Software Engineering<br/> 
+                Generative AI <br/>
+                Research & Development<br/> 
+                End-to-End Solutions<br/>
+              </p>
+            </div>
           </div>
         </div>
       </section>

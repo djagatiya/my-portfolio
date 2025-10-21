@@ -14,6 +14,13 @@ export default function Home() {
       ]
     },
     {
+      designation: "Writer / Blogger",
+      image_url : "/my-portfolio/medium_com_logo.jpeg",
+      company_name: "Medium  |  MAY 2024 - Present",
+      works: [
+      ]
+    },
+    {
       designation: "Data Scientist",
       image_url : "/my-portfolio/thomson_reuters_logo.jpeg",
       company_name: "Thomson Reuters  |  FEB 2022 - MAR 2023",

@@ -27,12 +27,14 @@ export default function Home() {
     <main className="h-screen overflow-y-scroll snap-y snap-mandatory">
       
       {/* Intro Section */}
-      <section id="intro" className="snap-start min-h-screen flex items-center justify-center bg-gray-800 px-6">
+      <section id="intro" className="snap-start min-h-screen flex items-center justify-center px-6" style={{"background" : "#0E2148"}}>
         <div className="flex flex-col items-center gap-6 max-w-5xl">
           <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="text-center md:text-left max-w-xl text-white">
-              <h1 className="text-5xl font-bold">Divyesh Jagatiya</h1>
-              <p className="text-xl mt-2">Sr. Software Engineer | Generative AI | Big Data | Blog Writer</p>
+            <div className="text-center md:text-left max-w-xl">
+              <h1 className="intro-header">
+                Divyesh Jagatiya
+              </h1>
+              <p className="text-xl mt-2 text-white">Sr. Software Engineer | Generative AI | Big Data | Blog Writer</p>
               <p className="mt-6 text-gray-200">
                 7+ years of experience in software engineering, deep learning, and big data technologies
                 for the e-discovery domain. Worked in Hadoop map-reduce programming, text analytics,
@@ -50,16 +52,16 @@ export default function Home() {
           </div>
           {/* Cards at the bottom of the section */}
           <div className="mt-12 w-full max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div className="bg-gray-600 p-4 rounded-xl text-center shadow hover:shadow-lg transition">
+            <div className="p-4 rounded-xl text-center shadow hover:shadow-lg transition intro-box-bg">
               <p className="text-3xl font-bold">7+</p>
-              <p className="text-gray-200 mt-1">Years Experience</p>
+              <p className="mt-1">Years Experience</p>
             </div>
-            <div className="bg-gray-600 p-4 rounded-xl text-center shadow hover:shadow-lg transition">
+            <div className="p-4 rounded-xl text-center shadow hover:shadow-lg transition intro-box-bg">
               <p className="text-3xl font-bold">10+</p>
-              <p className="text-gray-200 mt-1">Technologies</p>
+              <p className="mt-1">Technologies</p>
             </div>
-            <div className="bg-gray-600 p-4 rounded-xl text-center shadow hover:shadow-lg transition">
-              <p className="text-gray-200 mt-1">
+            <div className="p-4 rounded-xl text-center shadow hover:shadow-lg transition intro-box-bg">
+              <p className="mt-1">
                 Software Engineering<br/> 
                 Generative AI <br/>
                 Research & Development<br/> 

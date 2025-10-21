@@ -58,7 +58,7 @@ export default function Home() {
     <main className="h-screen overflow-y-scroll snap-y snap-mandatory">
       
       {/* Intro Section */}
-      <section id="intro" className="snap-start min-h-screen flex items-center justify-center px-6 pt-30" style={{"background" : "#0E2148"}}>
+      <section id="intro" className="min-h-screen flex items-center justify-center px-6 pt-30 pb-10" style={{"background" : "#0E2148"}}>
         <div className="flex flex-col items-center gap-6 max-w-5xl">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="text-center md:text-left max-w-xl">
@@ -104,7 +104,7 @@ export default function Home() {
       </section>
 
       {/* Work Experience Section */}
-      <section id="work_experience" className="snap-start min-h-screen px-6 py-16" style={{"background" : "#3C3D37", color: "white"}}>
+      <section id="work_experience" className="min-h-screen px-6 py-16" style={{"background" : "#3C3D37", color: "white"}}>
         <h2 className="text-4xl font-semibold text-center mb-12 text-gray-300">Work Experience</h2>
 
         <div className="relative max-w-3xl mx-auto">

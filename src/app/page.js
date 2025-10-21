@@ -58,7 +58,7 @@ export default function Home() {
     <main className="h-screen overflow-y-scroll snap-y snap-mandatory">
       
       {/* Intro Section */}
-      <section id="intro" className="snap-start min-h-screen flex items-center justify-center px-6" style={{"background" : "#0E2148"}}>
+      <section id="intro" className="snap-start min-h-screen flex items-center justify-center px-6 pt-30" style={{"background" : "#0E2148"}}>
         <div className="flex flex-col items-center gap-6 max-w-5xl">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="text-center md:text-left max-w-xl">

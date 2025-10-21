@@ -187,7 +187,7 @@ export default function Home() {
         <div className="flex flex-col items-center justify-center">  
             {projects_ls.map((item, index) => {
               return (
-                <div className="flex flex-col max-w-6xl m-5 p-5 text-black bg-gray-100 rounded-xl">
+                <div key={index} className="flex flex-col max-w-6xl m-5 p-5 text-black bg-gray-100 rounded-xl">
                   <div className="min-w-100">
                     <p className="text-left text-2xl font-semibold">
                       {item.name}

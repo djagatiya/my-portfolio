@@ -4,7 +4,8 @@ export default function Home() {
   const experience_ls = [
     {
       designation: "Sr. Software Engineer",
-      company_name: "Knovos India Pvt. Ltd | Sep, 2023 - Present",
+      image_url : "/my-portfolio/knovos_logo.jpeg",
+      company_name: "Knovos India Pvt. Ltd  |  SEP 2023 - Present",
       works: [
         "Researched, evaluated, and integrated machine learning models for <b>automatic speech recognition</b> in a large-scale review platform.",
         "Designed and implemented <b>REST API</b> and <b>RabbitMQ</b>-based integrations to enable seamless data processing and model communication.",
@@ -14,11 +15,34 @@ export default function Home() {
     },
     {
       designation: "Data Scientist",
-      company_name: "Thomson Reuters | Feb, 2022 - Mar, 2023",
+      image_url : "/my-portfolio/thomson_reuters_logo.jpeg",
+      company_name: "Thomson Reuters  |  FEB 2022 - MAR 2023",
       works: [
         "Designed and implemented a <b>BERT</b>-based model for named entity recognition.",
         "Implemented <b>end-to-end</b> natural language processing pipeline for <b>contract analytics</b>.",
         "Model building of <b>multilingual</b> document classification.",
+      ]
+    }, {
+      designation: "Software Engineer",
+      image_url : "/my-portfolio/knovos_logo.jpeg",
+      company_name: "Knovos India Pvt. Ltd  |  MAY 2017 - FEB 2022",
+      works: [
+        "Improved multi-lingual PII extraction from text documents using context-based matching and post-processing.",
+        "Implemented paragraph search and image search functionality using feature extraction and deep learning model.",
+        "Designed & implemented CNN deep learning model for image classification tasks.",
+        "Implemented MapReduce flow for TensorFlow model inference over Hadoop cluster.",
+        "Designed & implemented LSTM sequence model for NER for biomedical information.",
+        "Implemented metadata extraction from contract type text documents.",
+        "Explored rasa and albert-qa for the conversational assistant."
+      ]
+    }, {
+      designation: "Internship Training",
+      image_url : "/my-portfolio/knovos_logo.jpeg",
+      company_name: "Knovos India Pvt. Ltd  |  DEC 2016 - MAY 2017",
+      works: [
+        "Worked on a Document management system as a team project. It provides data processing and searching functionality at a large scale.",
+        "Explored various tools and technologies like Java, Hadoop, Solr, text analytics, named entity recognition.",
+        "Learned coding standard and best practices."
       ]
     }
   ];
@@ -34,7 +58,7 @@ export default function Home() {
               <h1 className="intro-header">
                 Divyesh Jagatiya
               </h1>
-              <p className="text-xl mt-2 text-white">Sr. Software Engineer | Generative AI | Big Data | Blog Writer</p>
+              <p className="text-xl mt-2 text-white">Sr. Software Engineer + Data Scientist <br/> Generative AI | Big Data | Blog Writer</p>
               <p className="mt-6 text-gray-200">
                 7+ years of experience in software engineering, deep learning, and big data technologies
                 for the e-discovery domain. Worked in Hadoop map-reduce programming, text analytics,
@@ -73,24 +97,40 @@ export default function Home() {
       </section>
 
       {/* Work Experience Section */}
-      <section id="work_experience" className="snap-start min-h-screen bg-gray-50 px-6 py-16">
-        <h2 className="text-3xl font-semibold text-center mb-12">Work Experience</h2>
+      <section id="work_experience" className="snap-start min-h-screen px-6 py-16" style={{"background" : "#3C3D37", color: "white"}}>
+        <h2 className="text-4xl font-semibold text-center mb-12 text-gray-300">Work Experience</h2>
 
         <div className="relative max-w-3xl mx-auto">
           {/* Vertical line */}
-          <div className="absolute left-4 top-0 w-1 bg-gray-300 h-full"></div>
+          <div className="absolute w-1 bg-gray-300 h-full" style={{margin: '-10px 0 0 6px'}}></div>
 
           {experience_ls.map((item, index) => (
             <div key={index} className="relative flex mb-12">
               {/* Timeline dot */}
-              <div className="flex flex-col items-center pr-6">
-                <div className="w-5 h-5 bg-black rounded-full flex-shrink-0"></div>
+              <div className="flex flex-col items-center pr-4">
+                <div className="w-4 h-4 flex-shrink-0" style={{
+                  "border" : "3px white solid", 
+                  "borderRadius" : "10px",
+                  "background" : "#3C3D37"
+                }}>&nbsp;</div>
               </div>
               {/* Content */}
               <div>
-                <h3 className="text-xl font-semibold">{item.designation}</h3>
-                <span className="text-gray-500">{item.company_name}</span>
-                <ul className="list-disc ml-6 mt-3 space-y-2">
+                <div className="flex">
+                  <Image 
+                    src={item.image_url}
+                    alt="Divyesh Jagatiya" 
+                    width="50"
+                    height="50"
+                    className="rounded-md"
+                  />
+                  <div className="ml-3">
+                    <h3 className="text-xl font-semibold">{item.designation}</h3>
+                    <span className="text-gray-400 font-bold">{item.company_name}</span>
+                  </div>
+                </div>
+                
+                <ul className="list-disc ml-8 mt-3 space-y-2">
                   {item.works.map((work_item, idx) => (
                     <li key={idx} dangerouslySetInnerHTML={{ __html: work_item }}></li>
                   ))}

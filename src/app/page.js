@@ -54,6 +54,36 @@ export default function Home() {
     }
   ];
 
+
+  const projects_ls = [
+    {
+      name: "ASR for eDiscovery",
+      sub_name: "Automatic Speech Recognition Processing Engine",
+      points: [
+        "Extended eDiscovery towards Audio video processing and review.",
+        "Designed and implemented <b>REST API</b> and <b>RabbitMQ</b>-based integrations to enable seamless data processing and model communication.",
+      ]
+    },
+    {
+      name: "Media Review Platform",
+      sub_name: "Audio Video Review Platform (Redaction)",
+      points: [
+        "Developed an <b>end-to-end</b> audio/video redaction system from scratch, enabling secure removal of sensitive information within defined timeframes.",
+        "Built a <b>customized audio/video player</b> with advanced features, including a redesigned control bar and a dedicated redaction timeline to preview and manage redacted sections."
+      ]
+    },
+    {
+      name: "AI Driven CLM Plugin",
+      sub_name : "",
+      points: [
+        "Researched, evaluated, and integrated machine learning models for <b>automatic speech recognition</b> in a large-scale review platform.",
+        "Designed and implemented <b>REST API</b> and <b>RabbitMQ</b>-based integrations to enable seamless data processing and model communication.",
+        "Developed an <b>end-to-end</b> audio/video redaction system from scratch, enabling secure removal of sensitive information within defined timeframes.",
+        "Built a <b>customized audio/video player</b> with advanced features, including a redesigned control bar and a dedicated redaction timeline to preview and manage redacted sections."
+      ]
+    }
+  ]
+
   return (
     <main className="h-screen overflow-y-scroll snap-y snap-mandatory">
       
@@ -105,7 +135,9 @@ export default function Home() {
 
       {/* Work Experience Section */}
       <section id="work_experience" className="min-h-screen px-6 py-16" style={{"background" : "#3C3D37", color: "white"}}>
-        <h2 className="text-4xl font-semibold text-center mb-12 text-gray-300">Work Experience</h2>
+        <h2 className="text-4xl font-bold text-center mb-12 text-gray-300">
+          WORK EXPERIENCE
+        </h2>
 
         <div className="relative max-w-3xl mx-auto">
           {/* Vertical line */}
@@ -149,6 +181,36 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="projects" className="min-h-screen px-20 py-16" style={{background: "#351F39"}}>
+        <h2 className="text-4xl font-bold text-center mb-12 text-gray-300">PROJECTS</h2>
+
+        <div className="flex flex-col items-center justify-center">  
+            {projects_ls.map((item, index) => {
+              return (
+                <div className="flex flex-col max-w-6xl m-5 p-5 text-black bg-gray-100 rounded-xl">
+                  <div className="min-w-100">
+                    <p className="text-left text-2xl font-semibold">
+                      {item.name}
+                    </p>
+                    <p className="text-md font-normal text-gray-500">
+                        {item.sub_name}
+                    </p>
+                  </div>
+                  <div className="flex gap-5">
+                    <div className="w-200 h-50 bg-black"></div>
+                    <div>
+                      <ul className="list-disc ml-8 space-y-2">
+                        {item.points.map((work_item, idx) => (
+                          <li key={idx} dangerouslySetInnerHTML={{ __html: work_item }}></li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              )
+            })}
+        </div>
+      </section>
     </main>
   );
 }
